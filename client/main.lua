@@ -132,7 +132,7 @@ local function CreateZone(type, number)
                 debugPoly = false,
                 heading = heading,
             })
-    
+
         local zoneCombo = ComboZone:Create({zone}, {name = boxName, debugPoly = false})
         zoneCombo:onPlayerInOut(function(isPointInside)
             if isPointInside then
@@ -154,7 +154,7 @@ local function CreateZone(type, number)
                     debugPoly = false,
                     heading = heading,
                 })
-        
+
             local zoneComboV = ComboZone:Create({zoneMark}, {name = boxName, debugPoly = false})
             zoneComboV:onPlayerInOut(function(isPointInside)
                 if isPointInside then
@@ -184,7 +184,7 @@ local function deliverVehicle(vehicle)
     CurrentLocation.model = Config.Locations["towspots"][randomLocation].model
     CurrentLocation.id = randomLocation
     CreateZone("towspots", randomLocation)
-    
+
     CurrentBlip = AddBlipForCoord(CurrentLocation.x, CurrentLocation.y, CurrentLocation.z)
     SetBlipColour(CurrentBlip, 3)
     SetBlipRoute(CurrentBlip, true)
